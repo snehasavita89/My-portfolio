@@ -1,0 +1,277 @@
+body {
+    background-color: #fefae0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+h1 {
+    color: #d90429
+}
+
+h2 {
+    color: #2b2d42;
+}
+
+u1 {
+    list-style: none;
+    padding: 0%
+}
+
+li {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+img {
+    border: 3px solid #ffb703;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn {
+    background-color: #ff006e;
+    color: white;
+    border: none;
+    padding: 10opx 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.e3s ease;
+    margin-top: 15px;
+}
+
+  .contact-btn:hover {
+    background-color:#d90429;
+  }
+
+body {
+    background-color: #fefae0;
+    color: #333333;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #023047;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffb703;
+}
+
+section h2 {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    padding: 10px;
+}
+
+section h2 {
+    color: #fb8500;
+    margin-bottom: 10px;
+}
+
+#projects u1 {
+    list-style: disc;
+    padding: 0;
+}
+
+#projects li {
+    background-color: #e0f7fa;
+    margin: 10px aute;
+    padding: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 4px apx rgba(0,0,0,0,1);
+}
+
+#contact {
+    margin: 40px auto;
+    text-align: center;
+}
+
+#contact a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #023047;
+    color: white;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    section, footer {
+        padding: 10px;
+    }
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family:Arial, sans-serif;
+    color:#333;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #0077cc;
+  text-align: center;
+}
+
+u1 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    list-style-type: disc;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #4444;
+    transition: 0.3s ease;
+}
+
+@keyframes fadeinzoom {
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    
+        }    
+        100% {
+            opacity: 1;
+            transfrom: sacle(1);
+        }
+    }
+
+    .welcome-heading {
+        animation: fadeInZoom 1s ease-in-out;
+    }
+    .styleFooter{
+    text-align: center; 
+    padding: 10px; 
+    margin-top: 40px;
+    background-image: url('images/download.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+/* .styleFooer{
+    text-align: center; 
+    padding: 10px; 
+    margin-top: 40px;
+    background-image: url('images/download.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+} */
+body {
+    background-color: #fefefe; font-family: 'poppins' ,sans-serif; color: #333;
+}
+a, button{
+    transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+    color: white;
+    background-color: purple;
+    transform: scale(1.05);
+
+}
+body {
+    font-family: 'segoe UI',sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+    color: #333;
+    margin: 0,
+    padding, 0;
+}
+
+.connect-btn:hover {
+    background-color: #b300b3;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .connect-btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    }
+    body.light-mode {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    body.dark-mode {
+        background: #121212;
+        color: #ffffff;
+    } 
+    .fade-in {
+        opacity: 0;
+        transform: translatey(20px);
+        transition: opacity 0.5s ease-out,transform 0.5s ease-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translatey(0);
+    }

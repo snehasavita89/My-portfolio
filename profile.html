@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <litle>Test/</litle>
+  </head>
+  <body>
+    <h1>This is profile.html page</h1>
+  </body>
+</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sneha's Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+    }
+
+    .navbar {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+    }
+
+    .navbar li {
+      display: inline;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background-color: deeppink;
+    }
+
+    .connect-btn {
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="scrollToTop()" id="topBtn" style="display:none; position:fixed; bottom:20px; right:20px; padding:10px 15px; font-size:16px;">⬆</button>
+
+  <!-- Top Navigation -->
+  <nav class="styleFooer">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1 class= "Welcome-heading"style=text-align: center; color: purple;">Welcome to Sneha's Web Page!</h1>
+
+  <!-- Secondary Navigation -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" style="background-color: #f9f9f9; border: 1px solid #ccc;">
+    <h2>About Me</h2>
+    <p>Hello, I'm Sneha, a BCA student passionate about coding and designing websites. I'm learning HTML, CSS, and soon JavaScript too!</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section  class="fade-in"id="projects" style="background-color: #e8f0fe;">
+    <h2>My Projects</h2>
+    <ul>
+      <li>Personal Portfolio Website (This one!)</li>
+      <li>To-do List App (coming soon!)</li>
+      <li>Chat App (coming soon!)</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #f0fff0;">
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br>
+
+    <button type="submit" class="connect-btn">Send</button>
+  </form>
+</section>
+  <script>    
+  const topBtn = document.getElementById("topBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+    function toggleTheme() {
+       document.body.classList.toggle("dark-mode");
+
+       document.body.classList.toggle("light-mode");
+    }
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function(e) {
+      e.preventDefault(), // page reload na ho
+      alert("Thanks for contacting me, Sneha will get back to you soon!");
+      form.reset(); // form empty ho jaye
+    });
+  </script>
+
+    <p>Email: <a href="mailto:sneha@email.com">sneha@email.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/">@yourinsta</a></p>
+  </section>
+
+  <!-- Footer -->
+   <footer style="text-align: center; padding: 20px; background: #f1f1f1;">
+  <p>Made with ❤ by Sneha</p>
+  <p>© 2025 Sneha Portfolio | <a href="mailto:sneha@email.com">Email Me</a></p>
+</footer>
+  <footer
+  class="styleFooter">
+    <p>Made with ❤️ by Sneha | &copy; 2025</p>
+    <p>&copy; 2025 Sneha's Web. All rights reserved.</p>
+
+    <ul style="list-style-type: disc; margin-left: 20px;"> 
+      <li>Personal Portfolio Website</li>
+      <li>To-do List App (coming soon!)</li>
+      <li>Chat Interface Design (coming soon!)</li>
+    </ul>
+
+    <p><strong>Web Developer & Future Data Analyst</strong> - I love learning coding and building websites!</p>
+
+    <h3>My Skills:</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS (coming soon)</li>
+      <li>JavaScript (soon!)</li>
+    </ul>
+
+    <p>Connect with me:
+      <a href="https://google.com" target="_blank">Visit Google</a> |
+      <a href="mailto:sneha@email.com">Email me</a> 
+    </p>
+
+    <button onclick="toggleTheme()" 
+    class="connect-btn">Toggle Theme</button>
+    class="connect-btn">Email me</button>
+    <p>Contact me at: sneha@email.com</p>
+
+    <img src="C:\Users\ADMIN12345\Desktop\kallipc\snehacodeworld\demoProject\download.png" alt="Sneha's Photo">
+  </footer>
+
+</body>
+</html>
